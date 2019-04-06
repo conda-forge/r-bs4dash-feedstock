@@ -1,8 +1,6 @@
 About r-bs4dash
 ===============
 
-[![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](http://numfocus.org)
-
 Home: https://divadnojnarg.github.io/bs4Dash/index.html, https://github.com/DivadNojnarg/bs4Dash
 
 Package license: GPL-2
@@ -16,8 +14,14 @@ Summary: Make 'Bootstrap 4' dashboards. Use the full power of 'AdminLTE3', a das
 Current build status
 ====================
 
-All platforms:
-[![noarch](https://img.shields.io/circleci/project/github/conda-forge/r-bs4dash-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/r-bs4dash-feedstock)
+
+<table><tr>
+    <td>All platforms:</td>
+    <td>
+      <img src="https://img.shields.io/badge/noarch-disabled-lightgrey.svg" alt="noarch disabled">
+    </td>
+  </tr>
+</table>
 
 Current release info
 ====================
@@ -50,6 +54,8 @@ conda search r-bs4dash --channel conda-forge
 
 About conda-forge
 =================
+
+[![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](http://numfocus.org)
 
 conda-forge is a community-led conda channel of installable packages.
 In order to provide high-quality builds, the process has been automated into the
