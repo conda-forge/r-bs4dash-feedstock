@@ -1,4 +1,4 @@
-{% set version = "0.3.0" %}
+{% set version = "0.4.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,12 +10,12 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/bs4Dash_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/bs4Dash/bs4Dash_{{ version }}.tar.gz
-  sha256: ea15ac89bd342a56a0b01da31c8c915172a860336f1b2a4d9f261eebf39c9081
+  sha256: 03fe481605635d2aaf52779d09ea33a8f354eb6fb8a75d353142e58589bf4ea4
 
 build:
   noarch: generic
   merge_build_host: True  # [win]
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -39,12 +39,15 @@ test:
     - "\"%R%\" -e \"library('bs4Dash')\""  # [win]
 
 about:
-  home: https://divadnojnarg.github.io/bs4Dash/index.html, https://github.com/DivadNojnarg/bs4Dash
+  home: https://rinterface.github.io/bs4Dash/index.html, https://github.com/RinteRface/bs4Dash
   license: GPL-2
   summary: Make 'Bootstrap 4' dashboards. Use the full power of 'AdminLTE3', a dashboard template
     built on top of 'Bootstrap 4'  <https://github.com/almasaeed2010/AdminLTE/tree/v3-dev>.
   license_family: GPL2
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+  license_file: 
+    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+    - LICENSE
 
 extra:
   recipe-maintainers:
