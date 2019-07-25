@@ -1,7 +1,7 @@
 About r-bs4dash
 ===============
 
-Home: https://divadnojnarg.github.io/bs4Dash/index.html, https://github.com/DivadNojnarg/bs4Dash
+Home: https://rinterface.github.io/bs4Dash/index.html, https://github.com/RinteRface/bs4Dash
 
 Package license: GPL-2
 
