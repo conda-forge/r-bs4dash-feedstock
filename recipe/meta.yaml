@@ -39,12 +39,15 @@ test:
     - "\"%R%\" -e \"library('bs4Dash')\""  # [win]
 
 about:
-  home: https://divadnojnarg.github.io/bs4Dash/index.html, https://github.com/DivadNojnarg/bs4Dash
+  home: https://rinterface.github.io/bs4Dash/index.html, https://github.com/RinteRface/bs4Dash
   license: GPL-2
   summary: Make 'Bootstrap 4' dashboards. Use the full power of 'AdminLTE3', a dashboard template
     built on top of 'Bootstrap 4'  <https://github.com/almasaeed2010/AdminLTE/tree/v3-dev>.
   license_family: GPL2
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+  license_file: 
+    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+    - LICENSE
 
 extra:
   recipe-maintainers:
