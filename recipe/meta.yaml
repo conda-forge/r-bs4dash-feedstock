@@ -16,7 +16,6 @@ build:
   noarch: generic
   merge_build_host: True  # [win]
   number: 1
-  noarch: generic
   rpaths:
     - lib/R/lib/
     - lib/
@@ -40,7 +39,7 @@ test:
 
 about:
   home: https://rinterface.github.io/bs4Dash/index.html, https://github.com/RinteRface/bs4Dash
-  license: GPL-2
+  license: GPL-2.0-or-later
   summary: Make 'Bootstrap 4' dashboards. Use the full power of 'AdminLTE3', a dashboard template
     built on top of 'Bootstrap 4'  <https://github.com/almasaeed2010/AdminLTE/tree/v3-dev>.
   license_family: GPL2
