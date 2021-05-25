@@ -3,7 +3,7 @@ About r-bs4dash
 
 Home: https://rinterface.github.io/bs4Dash/index.html, https://github.com/RinteRface/bs4Dash
 
-Package license: GPL-2
+Package license: GPL-2.0-or-later
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-bs4dash-feedstock/blob/master/LICENSE.txt)
 
