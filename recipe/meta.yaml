@@ -1,4 +1,4 @@
-{% set version = "0.5.0" %}
+{% set version = "2.0.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,27 +10,40 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/bs4Dash_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/bs4Dash/bs4Dash_{{ version }}.tar.gz
-  sha256: 228f089fc0c659f61376f85b3ce807f3ffc06bb49a2ec9ffd22bf8a69789e5f8
+  sha256: 9df6e7814a4d25c56b11b7f4645ee869708a5a29a34747228d471ca717e359a2
 
 build:
+  merge_build_host: true  # [win]
+  number: 0
   noarch: generic
-  merge_build_host: True  # [win]
-  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
-
+    - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
-    - r-htmltools
-    - r-shiny
+    - r-bslib >=0.2.4
+    - r-fresh
+    - r-htmltools >=0.5.1.1
+    - r-httpuv >=1.5.2
+    - r-jsonlite >=0.9.16
+    - r-lifecycle
+    - r-shiny >=1.6.0
+    - r-waiter
   run:
     - r-base
-    - r-htmltools
-    - r-shiny
+    - r-bslib >=0.2.4
+    - r-fresh
+    - r-htmltools >=0.5.1.1
+    - r-httpuv >=1.5.2
+    - r-jsonlite >=0.9.16
+    - r-lifecycle
+    - r-shiny >=1.6.0
+    - r-waiter
 
 test:
   commands:
@@ -40,12 +53,11 @@ test:
 about:
   home: https://rinterface.github.io/bs4Dash/index.html, https://github.com/RinteRface/bs4Dash
   license: GPL-2.0-or-later
-  summary: Make 'Bootstrap 4' dashboards. Use the full power of 'AdminLTE3', a dashboard template
-    built on top of 'Bootstrap 4'  <https://github.com/almasaeed2010/AdminLTE/tree/v3-dev>.
+  summary: Make 'Bootstrap 4' dashboards. Use the full power of 'AdminLTE3', a dashboard template built on top of 'Bootstrap 4'  <https://github.com/almasaeed2010/AdminLTE/tree/v3-dev>.
   license_family: GPL2
-  license_file: 
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
     - LICENSE
 
 extra:
