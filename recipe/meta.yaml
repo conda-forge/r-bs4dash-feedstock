@@ -13,24 +13,37 @@ source:
   sha256: 9df6e7814a4d25c56b11b7f4645ee869708a5a29a34747228d471ca717e359a2
 
 build:
-  noarch: generic
   merge_build_host: true  # [win]
   number: 0
+  noarch: generic
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
-
+    - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
-    - r-htmltools
-    - r-shiny
+    - r-bslib >=0.2.4
+    - r-fresh
+    - r-htmltools >=0.5.1.1
+    - r-httpuv >=1.5.2
+    - r-jsonlite >=0.9.16
+    - r-lifecycle
+    - r-shiny >=1.6.0
+    - r-waiter
   run:
     - r-base
-    - r-htmltools
-    - r-shiny
+    - r-bslib >=0.2.4
+    - r-fresh
+    - r-htmltools >=0.5.1.1
+    - r-httpuv >=1.5.2
+    - r-jsonlite >=0.9.16
+    - r-lifecycle
+    - r-shiny >=1.6.0
+    - r-waiter
 
 test:
   commands:
