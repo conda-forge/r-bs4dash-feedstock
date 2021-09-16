@@ -30,20 +30,22 @@ requirements:
     - r-fresh
     - r-htmltools >=0.5.1.1
     - r-httpuv >=1.5.2
+    - r-httr
     - r-jsonlite >=0.9.16
     - r-lifecycle
     - r-shiny >=1.6.0
-    - r-waiter
+    - r-waiter >=0.2.3
   run:
     - r-base
     - r-bslib >=0.2.4
     - r-fresh
     - r-htmltools >=0.5.1.1
     - r-httpuv >=1.5.2
+    - r-httr
     - r-jsonlite >=0.9.16
     - r-lifecycle
     - r-shiny >=1.6.0
-    - r-waiter
+    - r-waiter >=0.2.3
 
 test:
   commands:
