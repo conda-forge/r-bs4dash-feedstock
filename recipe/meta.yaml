@@ -1,4 +1,4 @@
-{% set version = "2.1.0" %}
+{% set version = "2.2.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/bs4Dash_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/bs4Dash/bs4Dash_{{ version }}.tar.gz
-  sha256: 1dd07a730ed19c64d1ff6fdf0f37336a0bc2358684811ccde95973c81b4c85cf
+  sha256: 66d7aa5ba3a0c77f75e9099e97a6730c9693db7aee51eb2fbe614cbc02c0441f
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
