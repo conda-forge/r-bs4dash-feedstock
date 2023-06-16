@@ -1,11 +1,11 @@
-About r-bs4dash
-===============
+About r-bs4dash-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-bs4dash-feedstock/blob/main/LICENSE.txt)
 
 Home: https://rinterface.github.io/bs4Dash/index.html, https://github.com/RinteRface/bs4Dash
 
 Package license: GPL-2.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-bs4dash-feedstock/blob/main/LICENSE.txt)
 
 Summary: Make 'Bootstrap 4' dashboards. Use the full power of 'AdminLTE3', a dashboard template built on top of 'Bootstrap 4'  <https://github.com/almasaeed2010/AdminLTE/tree/v3-dev>.
 
