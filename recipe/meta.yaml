@@ -1,4 +1,4 @@
-{% set version = "2.3.4" %}
+{% set version = "2.3.5" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/bs4Dash_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/bs4Dash/bs4Dash_{{ version }}.tar.gz
-  sha256: e20996f60b9ff339209cfb35521f49f8da0b843b5d389e14eef363d3df4190eb
+  sha256: c2161bbdccc33095de428e57397d1793ab809b1bbe2cd5657fd6fe10fdb80cda
 
 build:
   number: 0
